@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بومودورو القرآن الكريم ✦ تلاوات وتجويد المنشاوي وعبدالباسط والنفيس وأصوات الطبيعة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #070c0a;
+            --bg-secondary: #0e1814;
+            --bg-card: rgba(16, 26, 21, 0.78);
+            --border-card: rgba(52, 84, 70, 0.38);
+            --gold: #d4af37;
+            --gold-light: #fef08a;
+            --gold-glow: rgba(212, 175, 55, 0.28);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.25);
+            --break-blue: #06b6d4;
+            --break-glow: rgba(6, 182, 212, 0.25);
+            --text-main: #f0fdf4;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: radial-gradient(circle at 50% 15%, #15271f 0%, var(--bg-primary) 70%);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Subtle Islamic geometry background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem;
+            border-bottom: 1px solid var(--border-card);
+            backdrop-filter: blur(12px);
+            background: rgba(7, 12, 10, 0.65);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1b382b, #0d1e17);
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.55rem;
+            box-shadow: 0 0 16px var(--gold-glow);
+        }
+
+        .brand-text h1 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brand-text h1 span {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .brand-text p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .action-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            color: var(--text-main);
+            padding: 0.55rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            border-color: var(--gold);
+            background: rgba(30, 48, 40, 0.85);
+            transform: translateY(-1px);
+        }
+
+        main {
+            position: relative;
+            z-index: 5;
+            flex: 1;
+            max-width: 1420px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.4rem;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 1.5rem;
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 1.6rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+            transition: border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.35);
+        }
+
+        .pomodoro-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        /* Preset Modes Bar */
+        .modes-bar {
+            display: flex;
+            background: rgba(12, 20, 17, 0.85);
+            border: 1px solid var(--border-card);
+            padding: 0.35rem;
+            border-radius: 14px;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .mode-chip {
+            flex: 1;
+            min-width: 125px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.65rem 0.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .mode-chip span.label {
+            font-size: 0.72rem;
+            opacity: 0.75;
+            font-weight: 400;
+        }
+
+        .mode-chip:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .mode-chip.active {
+            background: linear-gradient(135deg, #1b382b, #10251c);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            box-shadow: 0 4px 14px var(--gold-glow);
+        }
+
+        /* Circular Timer Box */
+        .timer-display-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.75rem 1rem;
+            position: relative;
+        }
+
+        .timer-svg-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+        }
+
+        .timer-svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .timer-circle-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.06);
+            stroke-width: 12;
+        }
+
+        .timer-circle-progress {
+            fill: none;
+            stroke: var(--emerald);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-dasharray: 880;
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 0.8s linear, stroke 0.4s ease;
+            filter: drop-shadow(0 0 12px var(--emerald-glow));
+        }
+
+        .timer-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .timer-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.9rem;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid var(--emerald);
+            color: var(--emerald);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .timer-status-badge.break {
+            background: rgba(6, 182, 212, 0.15);
+            border-color: var(--break-blue);
+            color: var(--break-blue);
+        }
+
+        .timer-digits {
+            font-size: 4.6rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            font-variant-numeric: tabular-nums;
+            color: #ffffff;
+            line-height: 1;
+            margin: 0.2rem 0;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .timer-subtext {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .round-dots {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .round-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .round-dot.done {
+            background: var(--gold);
+            box-shadow: 0 0 8px var(--gold-glow);
+        }
+
+        .round-dot.active {
+            background: var(--emerald);
+            transform: scale(1.35);
+            box-shadow: 0 0 10px var(--emerald-glow);
+        }
+
+        .session-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 1.4rem;
+            background: rgba(10, 17, 14, 0.7);
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+        }
+
+        .session-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .session-item .title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .session-item .value {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--gold-light);
+        }
+
+        .timer-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .primary-timer-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #ffffff;
+            border: none;
+            padding: 0.9rem 2.6rem;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+            transition: all 0.25s ease;
+        }
+
+        .primary-timer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(16, 185, 129, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .primary-timer-btn.running {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
+        }
+
+        .secondary-timer-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-card);
+            color: var(--text-main);
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .secondary-timer-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--gold);
+            transform: translateY(-1px);
+        }
+
+        .verse-banner {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.09), rgba(16, 185, 129, 0.06));
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 1rem 1.4rem;
+            border-radius: 14px;
+            text-align: center;
+            font-family: 'Amiri', serif;
+            font-size: 1.25rem;
+            color: #fef08a;
+            line-height: 1.8;
+            box-shadow: inset 0 0 16px rgba(212, 175, 55, 0.05);
+            transition: opacity 0.3s ease;
+        }
+
+        /* Right Column: Audio & Nature Studio */
+        .audio-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 0.65rem;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title .icon {
+            font-size: 1.25rem;
+            color: var(--gold);
+        }
+
+        .quran-player-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        /* Reciter Selector Tabs */
+        .reciter-tabs-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .reciter-tabs-label {
+            font-size: 0.78rem;
+            color: var(--gold-light);
+            font-weight: 700;
+        }
+
+        .reciter-tabs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+            background: rgba(10, 18, 14, 0.8);
+            padding: 0.3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-card);
+        }
+
+        .reciter-tab {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 0.55rem 0.35rem;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.15rem;
+        }
+
+        .reciter-tab .reciter-sub {
+            font-size: 0.65rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .reciter-tab:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .reciter-tab.active {
+            background: linear-gradient(135deg, #223f32, #142820);
+            color: var(--gold);
+            border-color: var(--gold);
+            box-shadow: 0 2px 10px var(--gold-glow);
+        }
+
+        .current-surah-display {
+            background: rgba(10, 18, 14, 0.9);
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .surah-info {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .surah-number-badge {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #182e25, #0c1813);
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .surah-name-text {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            font-family: 'Amiri', serif;
+        }
+
+        .surah-reciter-name {
+            font-size: 0.82rem;
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .recitation-badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .surah-select-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .surah-dropdown {
+            flex: 1;
+            background: #0c1612;
+            border: 1px solid var(--border-card);
+            color: #fff;
+            padding: 0.65rem 0.85rem;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .surah-dropdown:focus {
+            border-color: var(--gold);
+        }
+
+        .audio-progress-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .progress-bar-wrap {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--gold), var(--emerald));
+            border-radius: 10px;
+            transition: width 0.1s linear;
+        }
+
+        .time-labels {
+            display: space-between;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .quran-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+
+        .track-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-card);
+            color: #fff;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+
+        .track-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--gold);
+        }
+
+        .quran-play-btn {
+            flex: 1;
+            background: linear-gradient(135deg, #d4af37, #9a7b20);
+            color: #050d0a;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 16px var(--gold-glow);
+            transition: all 0.25s ease;
+        }
+
+        .quran-play-btn:hover {
+            filter: brightness(1.15);
+            transform: translateY(-1px);
+        }
+
+        .volume-control-row {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.35rem 0;
+        }
+
+        .volume-icon {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            width: 24px;
+            text-align: center;
+        }
+
+        .volume-slider {
+            flex: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.12);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--gold);
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+            transition: transform 0.1s ease;
+        }
+
+        .volume-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .options-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.4rem;
+            padding-top: 0.65rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .check-item input[type="checkbox"] {
+            accent-color: var(--gold);
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Nature Sounds Matrix */
+        .nature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .nature-card {
+            background: rgba(10, 18, 14, 0.7);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            padding: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            transition: all 0.25s ease;
+        }
+
+        .nature-card.active {
+            border-color: var(--emerald);
+            background: rgba(16, 185, 129, 0.1);
+            box-shadow: 0 0 14px var(--emerald-glow);
+        }
+
+        .nature-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nature-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .toggle-pill {
+            position: relative;
+            width: 38px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.25s ease;
+        }
+
+        .toggle-pill.on {
+            background: var(--emerald);
+        }
+
+        .toggle-thumb {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 0.25s ease;
+        }
+
+        .toggle-pill.on .toggle-thumb {
+            transform: translateX(-18px);
+        }
+
+        /* Zen Mode (Fullscreen) */
+        body.zen-mode header,
+        body.zen-mode .audio-section,
+        body.zen-mode .modes-bar,
+        body.zen-mode .session-summary,
+        body.zen-mode .verse-banner {
+            display: none !important;
+        }
+
+        body.zen-mode main {
+            grid-template-columns: 1fr;
+            max-width: 680px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        body.zen-mode .pomodoro-section {
+            width: 100%;
+        }
+
+        body.zen-mode .glass-card {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .zen-exit-btn {
+            display: none;
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 100;
+        }
+
+        body.zen-mode .zen-exit-btn {
+            display: flex;
+        }
+
+        @media (max-width: 1024px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 1rem;
+            }
+            main {
+                padding: 1rem;
+            }
+            .timer-digits {
+                font-size: 3.5rem;
+            }
+            .timer-svg-container {
+                width: 260px;
+                height: 260px;
+            }
+            .nature-grid {
+                grid-template-columns: 1fr;
+            }
+            .reciter-tabs {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="brand-container">
+            <div class="brand-logo">📖</div>
+            <div class="brand-text">
+                <h1>بومودورو القرآن الكريم <span>✦ كبار القراء وأصوات الطبيعة</span></h1>
+                <p>جلسة 4 ساعات ✦ تلاوات وتجويد المنشاوي وعبدالباسط والنفيس مع أصوات الطبيعة النقية</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button class="action-btn" id="btnNotification" title="تفعيل إشعارات المتصفح">
+                <span>🔔</span>
+                <span id="notifLabel">تفعيل التنبيهات</span>
+            </button>
+            <button class="action-btn" id="btnZenToggle" title="وضع ملء الشاشة والتركيز الكامل">
+                <span>⛶</span>
+                <span>وضع التركيز (Zen)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zen Exit Button -->
+    <button class="action-btn zen-exit-btn" id="btnZenExit">
+        <span>✕</span>
+        <span>الخروج من وضع التركيز</span>
+    </button>
+
+    <!-- Main Workspace -->
+    <main>
+
+        <!-- Left Column: Pomodoro Core -->
+        <section class="pomodoro-section">
+
+            <!-- Preset Modes Bar -->
+            <div class="modes-bar">
+                <button class="mode-chip active" data-mode="deep4h">
+                    <span>4 ساعات تركيز عميق</span>
+                    <span class="label">4 جولات × 50د عمل + 10د راحة</span>
+                </button>
+                <button class="mode-chip" data-mode="classic4h">
+                    <span>بومودورو كلاسيكي</span>
+                    <span class="label">8 جولات × 25د عمل + 5د راحة</span>
+                </button>
+                <button class="mode-chip" data-mode="continuous4h">
+                    <span>تدفق متواصل</span>
+                    <span class="label">240 دقيقة متصلة</span>
+                </button>
+                <button class="mode-chip" data-mode="custom">
+                    <span>مخصص ⚙️</span>
+                    <span class="label">تحديد أوقات خاصة</span>
+                </button>
+            </div>
+
+            <!-- Timer Card -->
+            <div class="glass-card">
+                <div class="timer-display-box">
+                    <div class="timer-svg-container">
+                        <svg class="timer-svg" viewBox="0 0 320 320">
+                            <circle class="timer-circle-bg" cx="160" cy="160" r="140"></circle>
+                            <circle class="timer-circle-progress" id="progressCircle" cx="160" cy="160" r="140"></circle>
+                        </svg>
+
+                        <div class="timer-content">
+                            <div class="timer-status-badge" id="statusBadge">
+                                <span>⚡</span>
+                                <span id="statusText">وقت العمل والتركيز</span>
+                            </div>
+                            <div class="timer-digits" id="timerDigits">50:00</div>
+                            <div class="timer-subtext" id="timerSubtext">الجولة 1 من 4 ✦ استعن بالله</div>
+                        </div>
+                    </div>
+
+                    <!-- Round Indicators -->
+                    <div class="round-dots" id="roundDotsContainer">
+                        <!-- Dots populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Session Stats Bar -->
+                <div class="session-summary">
+                    <div class="session-item">
+                        <span class="title">إجمالي الجلسة المستهدفة</span>
+                        <span class="value">4 ساعات (240 دقيقة)</span>
+                    </div>
+                    <div class="session-item">
+                        <span class="title">الوقت المنقضي</span>
+                        <span class="value" id="totalElapsedText">00:00:00</span>
+                    </div>
+                    <div class="session-item">
+                        <span class="title">الجولات المكتملة</span>
+                        <span class="value" id="roundsCompletedText">0 / 4</span>
+                    </div>
+                </div>
+
+                <!-- Timer Action Controls -->
+                <div class="timer-controls">
+                    <button class="secondary-timer-btn" id="btnReset" title="إعادة تعيين الجولة">
+                        ↺
+                    </button>
+                    <button class="primary-timer-btn" id="btnPlayPause">
+                        <span id="playPauseIcon">▶</span>
+                        <span id="playPauseText">ابدأ الجلسة</span>
+                    </button>
+                    <button class="secondary-timer-btn" id="btnSkip" title="تخطي إلى المرحلة التالية">
+                        ⏭
+                    </button>
+                </div>
+            </div>
+
+            <!-- Inspiring Quranic Verse Banner -->
+            <div class="verse-banner" id="verseBanner">
+                ﴿ وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ ﴾
+            </div>
+
+        </section>
+
+        <!-- Right Column: Quran Audio & Nature Studio -->
+        <section class="audio-section">
+
+            <!-- Quran Player Card -->
+            <div class="glass-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span class="icon">🕌</span>
+                        <span>مشغل التلاوات والقرآن الكريم</span>
+                    </div>
+                    <span style="font-size: 0.8rem; color: var(--gold); font-weight: 700;">114 سورة كاملة</span>
+                </div>
+
+                <div class="quran-player-box">
+
+                    <!-- Reciter Selection Tabs -->
+                    <div class="reciter-tabs-box">
+                        <span class="reciter-tabs-label">اختر القارئ ونوع التلاوة:</span>
+                        <div class="reciter-tabs">
+                            <button class="reciter-tab active" data-reciter="minshawi_mujawwad">
+                                <span>🎙️ الشيخ المنشاوي</span>
+                                <span class="reciter-sub">تلاوة وتجويد خاشع</span>
+                            </button>
+                            <button class="reciter-tab" data-reciter="abdulbasit_mujawwad">
+                                <span>🎙️ عبدالباسط عبدالصمد</span>
+                                <span class="reciter-sub">تلاوة وتجويد (الذهبي)</span>
+                            </button>
+                            <button class="reciter-tab" data-reciter="ahmad_nufais">
+                                <span>🎙️ أحمد النفيس</span>
+                                <span class="reciter-sub">ترتيل هادئ معاصر</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Current Surah Card -->
+                    <div class="current-surah-display">
+                        <div class="surah-info">
+                            <div class="surah-number-badge" id="surahNumberBadge">001</div>
+                            <div>
+                                <div class="surah-name-text" id="surahNameText">سورة الفاتحة</div>
+                                <div class="surah-reciter-name">
+                                    <span id="reciterNameLabel">الشيخ محمد صديق المنشاوي</span>
+                                    <span class="recitation-badge" id="recitationTypeBadge">تلاوة وتجويد</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span id="audioStatusIcon" style="font-size: 1.4rem;">⏸</span>
+                    </div>
+
+                    <!-- Surah Selector -->
+                    <div class="surah-select-row">
+                        <select class="surah-dropdown" id="surahDropdown">
+                            <!-- 114 Surahs injected by JS -->
+                        </select>
+                    </div>
+
+                    <!-- Seekbar -->
+                    <div class="audio-progress-container">
+                        <div class="progress-bar-wrap" id="progressBarWrap">
+                            <div class="progress-bar-fill" id="progressBarFill"></div>
+                        </div>
+                        <div class="time-labels">
+                            <span id="currentTimeLabel">00:00</span>
+                            <span id="durationLabel">--:--</span>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="quran-controls">
+                        <button class="track-btn" id="btnPrevSurah" title="السورة السابقة">⏮</button>
+                        <button class="quran-play-btn" id="btnQuranPlayPause">
+                            <span id="quranBtnIcon">▶</span>
+                            <span id="quranBtnLabel">تشغيل التلاوة</span>
+                        </button>
+                        <button class="track-btn" id="btnNextSurah" title="السورة التالية">⏭</button>
+                    </div>
+
+                    <!-- Quran Volume Slider -->
+                    <div class="volume-control-row">
+                        <span class="volume-icon">🔊</span>
+                        <input type="range" class="volume-slider" id="quranVolume" min="0" max="1" step="0.01" value="0.85" title="مستوى صوت القرآن">
+                        <span id="quranVolPercent" style="font-size: 0.8rem; color: var(--text-muted); width: 35px;">85%</span>
+                    </div>
+
+                    <!-- Playback Rules / Options -->
+                    <div class="options-row">
+                        <label class="check-item">
+                            <input type="checkbox" id="checkAutoNext" checked>
+                            <span>الانتقال التلقائي للسورة التالية عند الانتهاء</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" id="checkPauseOnBreak">
+                            <span>إيقاف القرآن مؤقتاً أثناء وقت الاستراحة تلقائياً</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nature Sounds Mixer Card -->
+            <div class="glass-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span class="icon">🍃</span>
+                        <span>ميكسر أصوات الطبيعة (Ambient Mixer)</span>
+                    </div>
+                    <span style="font-size: 0.8rem; color: var(--emerald); font-weight: 700;">توليد نقي مستمر</span>
+                </div>
+
+                <!-- Master Nature Volume -->
+                <div class="volume-control-row" style="margin-bottom: 0.9rem;">
+                    <span class="volume-icon" style="color: var(--emerald);">🎚️</span>
+                    <span style="font-size: 0.85rem; font-weight: 700; min-width: 95px;">التحكم العام:</span>
+                    <input type="range" class="volume-slider" id="natureMasterVolume" min="0" max="1" step="0.01" value="0.6" title="مستوى أصوات الطبيعة العام">
+                    <span id="natureMasterVolPercent" style="font-size: 0.8rem; color: var(--text-muted); width: 35px;">60%</span>
+                </div>
+
+                <!-- Nature Sound Cards Grid -->
+                <div class="nature-grid">
+
+                    <!-- Rain -->
+                    <div class="nature-card" id="card-rain">
+                        <div class="nature-top">
+                            <span class="nature-label">🌧️ مطر هادئ</span>
+                            <div class="toggle-pill" data-sound="rain"><div class="toggle-thumb"></div></div>
+                        </div>
+                        <input type="range" class="volume-slider" data-sound-vol="rain" min="0" max="1" step="0.02" value="0.7">
+                    </div>
+
+                    <!-- Ocean Waves -->
+                    <div class="nature-card" id="card-waves">
+                        <div class="nature-top">
+                            <span class="nature-label">🌊 أمواج البحر</span>
+                            <div class="toggle-pill" data-sound="waves"><div class="toggle-thumb"></div></div>
+                        </div>
+                        <input type="range" class="volume-slider" data-sound-vol="waves" min="0" max="1" step="0.02" value="0.6">
+                    </div>
+
+                    <!-- Distant Thunder -->
+                    <div class="nature-card" id="card-thunder">
+                        <div class="nature-top">
+                            <span class="nature-label">⚡ رعد بعيد</span>
+                            <div class="toggle-pill" data-sound="thunder"><div class="toggle-thumb"></div></div>
+                        </div>
+                        <input type="range" class="volume-slider" data-sound-vol="thunder" min="0" max="1" step="0.02" value="0.5">
+                    </div>
+
+                    <!-- Breeze & Forest -->
+                    <div class="nature-card" id="card-wind">
+                        <div class="nature-top">
+                            <span class="nature-label">🌲 نسيم الغابة</span>
+                            <div class="toggle-pill" data-sound="wind"><div class="toggle-thumb"></div></div>
+                        </div>
+                        <input type="range" class="volume-slider" data-sound-vol="wind" min="0" max="1" step="0.02" value="0.5">
+                    </div>
+
+                    <!-- Stream / Water -->
+                    <div class="nature-card" id="card-stream">
+                        <div class="nature-top">
+                            <span class="nature-label">💧 خرير الماء</span>
+                            <div class="toggle-pill" data-sound="stream"><div class="toggle-thumb"></div></div>
+                        </div>
+                        <input type="range" class="volume-slider" data-sound-vol="stream" min="0" max="1" step="0.02" value="0.6">
+                    </div>
+
+                    <!-- Campfire -->
+                    <div class="nature-card" id="card-fire">
+                        <div class="nature-top">
+                            <span class="nature-label">🪵 حطب مشتعل</span>
+                            <div class="toggle-pill" data-sound="fire"><div class="toggle-thumb"></div></div>
+                        </div>
+                        <input type="range" class="volume-slider" data-sound-vol="fire" min="0" max="1" step="0.02" value="0.5">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Hidden Audio Element for Quran -->
+    <audio id="quranAudio" preload="metadata"></audio>
+
+    <script>
+        /* ============================================================
+           1. 114 SURAHS DATA & ARABIC NAMES
+        ============================================================ */
+        const SURAHS = [
+            'الفاتحة', 'البقرة', 'آل عمران', 'النساء', 'المائدة', 'الأنعام', 'الأعراف', 'الأنفال', 'التوبة', 'يونس',
+            'هود', 'يوسف', 'الرعد', 'إبراهيم', 'الحجر', 'النحل', 'الإسراء', 'الكهف', 'مريم', 'طه',
+            'الأنبياء', 'الحج', 'المؤمنون', 'النور', 'الفرقان', 'الشعراء', 'النمل', 'القصص', 'العنكبوت', 'الروم',
+            'لقمان', 'السجدة', 'الأحزاب', 'سبأ', 'فاطر', 'يس', 'الصافات', 'ص', 'الزمر', 'غافر',
+            'فصلت', 'الشورى', 'الزخرف', 'الدخان', 'الجاثية', 'الأحقاف', 'محمد', 'الفتح', 'الحجرات', 'ق',
+            'الذاريات', 'الطور', 'النجم', 'القمر', 'الرحمن', 'الواقعة', 'الحديد', 'المجادلة', 'الحشر', 'الممتحنة',
+            'الصف', 'الجمعة', 'المنافقون', 'التغابن', 'الطلاق', 'التحريم', 'الملك', 'القلم', 'الحاقة', 'المعارج',
+            'نوح', 'الجن', 'المزمل', 'المدثر', 'القيامة', 'الإنسان', 'المرسلات', 'النبأ', 'النازعات', 'عبس',
+            'التكوير', 'الانفطار', 'المطففين', 'الانشقاق', 'البروج', 'الطارق', 'الأعلى', 'الغاشية', 'الفجر', 'البلد',
+            'الشمس', 'الليل', 'الضحى', 'الشرح', 'التين', 'العلق', 'القدر', 'البينة', 'الزلزلة', 'العاديات',
+            'القارعة', 'التكاثر', 'العصر', 'الهمزة', 'الفيل', 'قريش', 'الماعون', 'الكوثر', 'الكافرون', 'النصر',
+            'المسد', 'الإخلاص', 'الفلق', 'الناس'
+        ];
+
+        const VERSES_LIST = [
+            '﴿ وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ ﴾',
+            '﴿ إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ إِنَّا لَا نُضِيعُ أَجْرَ مَنْ أَحْسَنَ عَمَلًا ﴾',
+            '﴿ وَأَن لَّيْسَ لِلإِنسَانِ إِلاَّ مَا سَعَى * وَأَنَّ سَعْيَهُ سَوْفَ يُرَى ﴾',
+            '﴿ فَإِذَا فَرَغْتَ فَانصَبْ * وَإِلَى رَبِّكَ فَارْغَب ﴾',
+            '﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ إِنَّ اللَّهَ بَالِغُ أَمْرِهِ ﴾',
+            '﴿ رَّبِّ زِدْنِي عِلْمًا ﴾',
+            '﴿ الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ اللَّهِ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾'
+        ];
+
+        /* ============================================================
+           2. RECITERS CONFIG (تلاوة وتجويد وليس ترتيل)
+        ============================================================ */
+        const RECITERS = {
+            minshawi_mujawwad: {
+                id: 'minshawi_mujawwad',
+                name: 'الشيخ محمد صديق المنشاوي',
+                typeBadge: 'تلاوة وتجويد (المصحف المجوّد)',
+                server: 'https://cdn.mp3quran.net/audio/muhammad-minshawi/r2/'
+            },
+            abdulbasit_mujawwad: {
+                id: 'abdulbasit_mujawwad',
+                name: 'الشيخ عبدالباسط عبدالصمد',
+                typeBadge: 'تلاوة وتجويد (المصحف المجوّد)',
+                server: 'https://cdn.mp3quran.net/audio/abdulbasit-abdulsamad/r1/'
+            },
+            ahmad_nufais: {
+                id: 'ahmad_nufais',
+                name: 'الشيخ أحمد بن عبدالعزيز النفيس',
+                typeBadge: 'ترتيل معاصر',
+                server: 'https://cdn.mp3quran.net/audio/ahmad-nufais/r1/'
+            }
+        };
+
+        let currentReciterKey = 'minshawi_mujawwad';
+
+        /* ============================================================
+           3. POMODORO STATE & MODES
+        ============================================================ */
+        const MODES = {
+            deep4h: {
+                id: 'deep4h',
+                name: '4 ساعات تركيز عميق',
+                focusMinutes: 50,
+                breakMinutes: 10,
+                rounds: 4
+            },
+            classic4h: {
+                id: 'classic4h',
+                name: 'بومودورو كلاسيكي',
+                focusMinutes: 25,
+                breakMinutes: 5,
+                rounds: 8
+            },
+            continuous4h: {
+                id: 'continuous4h',
+                name: 'تدفق متواصل 4 ساعات',
+                focusMinutes: 240,
+                breakMinutes: 0,
+                rounds: 1
+            },
+            custom: {
+                id: 'custom',
+                name: 'مخصص',
+                focusMinutes: 45,
+                breakMinutes: 15,
+                rounds: 4
+            }
+        };
+
+        let currentMode = MODES.deep4h;
+        let isRunning = false;
+        let isFocus = true;
+        let currentRound = 1;
+        let secondsLeft = currentMode.focusMinutes * 60;
+        let timerInterval = null;
+        let totalElapsedSeconds = 0;
+        let totalElapsedInterval = null;
+        const CIRCUMFERENCE = 2 * Math.PI * 140; // ~879.64
+
+        /* ============================================================
+           4. QURAN AUDIO PLAYER LOGIC
+        ============================================================ */
+        const quranAudio = document.getElementById('quranAudio');
+        const surahDropdown = document.getElementById('surahDropdown');
+        const surahNumberBadge = document.getElementById('surahNumberBadge');
+        const surahNameText = document.getElementById('surahNameText');
+        const reciterNameLabel = document.getElementById('reciterNameLabel');
+        const recitationTypeBadge = document.getElementById('recitationTypeBadge');
+        const btnQuranPlayPause = document.getElementById('btnQuranPlayPause');
+        const quranBtnIcon = document.getElementById('quranBtnIcon');
+        const quranBtnLabel = document.getElementById('quranBtnLabel');
+        const audioStatusIcon = document.getElementById('audioStatusIcon');
+        const btnPrevSurah = document.getElementById('btnPrevSurah');
+        const btnNextSurah = document.getElementById('btnNextSurah');
+        const progressBarWrap = document.getElementById('progressBarWrap');
+        const progressBarFill = document.getElementById('progressBarFill');
+        const currentTimeLabel = document.getElementById('currentTimeLabel');
+        const durationLabel = document.getElementById('durationLabel');
+        const quranVolume = document.getElementById('quranVolume');
+        const quranVolPercent = document.getElementById('quranVolPercent');
+        const checkAutoNext = document.getElementById('checkAutoNext');
+        const checkPauseOnBreak = document.getElementById('checkPauseOnBreak');
+
+        let currentSurahIndex = 0;
+
+        SURAHS.forEach((name, idx) => {
+            const opt = document.createElement('option');
+            opt.value = idx;
+            const padNum = String(idx + 1).padStart(3, '0');
+            opt.textContent = `${padNum} - سورة ${name}`;
+            surahDropdown.appendChild(opt);
+        });
+
+        function getSurahUrl(reciterKey, surahIndex) {
+            const padNum = String(surahIndex + 1).padStart(3, '0');
+            const server = RECITERS[reciterKey].server;
+            return `${server}${padNum}.mp3`;
+        }
+
+        function setReciter(reciterKey, keepPlaying = true) {
+            currentReciterKey = reciterKey;
+            const reciter = RECITERS[reciterKey];
+            reciterNameLabel.textContent = reciter.name;
+            recitationTypeBadge.textContent = reciter.typeBadge;
+
+            document.querySelectorAll('.reciter-tab').forEach(tab => {
+                if (tab.dataset.reciter === reciterKey) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            localStorage.setItem('quran_selected_reciter', reciterKey);
+
+            const wasPlaying = !quranAudio.paused;
+            loadSurah(currentSurahIndex, keepPlaying && wasPlaying);
+        }
+
+        function loadSurah(index, autoPlay = false) {
+            if (index < 0) index = 0;
+            if (index > 113) index = 113;
+            currentSurahIndex = index;
+            surahDropdown.value = index;
+
+            const padNum = String(index + 1).padStart(3, '0');
+            surahNumberBadge.textContent = padNum;
+            surahNameText.textContent = `سورة ${SURAHS[index]}`;
+
+            quranAudio.src = getSurahUrl(currentReciterKey, index);
+            quranAudio.load();
+            localStorage.setItem('quran_last_surah', index);
+
+            if (autoPlay) {
+                playQuran();
+            } else {
+                updateQuranPlayButton(false);
+            }
+        }
+
+        function playQuran() {
+            initAudioContext();
+            quranAudio.play().then(() => {
+                updateQuranPlayButton(true);
+            }).catch(e => {
+                console.warn('Audio play error:', e);
+                updateQuranPlayButton(false);
+            });
+        }
+
+        function pauseQuran() {
+            quranAudio.pause();
+            updateQuranPlayButton(false);
+        }
+
+        function updateQuranPlayButton(playing) {
+            if (playing) {
+                quranBtnIcon.textContent = '⏸';
+                quranBtnLabel.textContent = 'إيقاف التلاوة مؤقتاً';
+                audioStatusIcon.textContent = '🔊';
+            } else {
+                quranBtnIcon.textContent = '▶';
+                quranBtnLabel.textContent = 'تشغيل التلاوة';
+                audioStatusIcon.textContent = '⏸';
+            }
+        }
+
+        // Reciter Tabs click listener
+        document.querySelectorAll('.reciter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const recKey = tab.dataset.reciter;
+                setReciter(recKey, true);
+            });
+        });
+
+        btnQuranPlayPause.addEventListener('click', () => {
+            if (quranAudio.paused) {
+                playQuran();
+            } else {
+                pauseQuran();
+            }
+        });
+
+        btnNextSurah.addEventListener('click', () => {
+            if (currentSurahIndex < 113) {
+                loadSurah(currentSurahIndex + 1, !quranAudio.paused);
+            }
+        });
+
+        btnPrevSurah.addEventListener('click', () => {
+            if (currentSurahIndex > 0) {
+                loadSurah(currentSurahIndex - 1, !quranAudio.paused);
+            }
+        });
+
+        surahDropdown.addEventListener('change', (e) => {
+            loadSurah(parseInt(e.target.value), !quranAudio.paused);
+        });
+
+        quranAudio.addEventListener('timeupdate', () => {
+            if (!isNaN(quranAudio.duration) && quranAudio.duration > 0) {
+                const pct = (quranAudio.currentTime / quranAudio.duration) * 100;
+                progressBarFill.style.width = `${pct}%`;
+                currentTimeLabel.textContent = formatTimeSeconds(Math.floor(quranAudio.currentTime));
+                durationLabel.textContent = formatTimeSeconds(Math.floor(quranAudio.duration));
+            }
+        });
+
+        quranAudio.addEventListener('ended', () => {
+            if (checkAutoNext.checked && currentSurahIndex < 113) {
+                loadSurah(currentSurahIndex + 1, true);
+            } else {
+                updateQuranPlayButton(false);
+            }
+        });
+
+        progressBarWrap.addEventListener('click', (e) => {
+            const rect = progressBarWrap.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            if (!isNaN(quranAudio.duration)) {
+                quranAudio.currentTime = pos * quranAudio.duration;
+            }
+        });
+
+        quranVolume.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            quranAudio.volume = val;
+            quranVolPercent.textContent = `${Math.round(val * 100)}%`;
+        });
+
+        /* ============================================================
+           5. WEB AUDIO SYNTHESIS: NATURE AMBIENT & CHIME
+        ============================================================ */
+        let audioCtx = null;
+        let masterNatureGain = null;
+        let natureNodes = {
+            rain: { active: false, gain: null, node: null, volume: 0.7 },
+            waves: { active: false, gain: null, node: null, volume: 0.6 },
+            thunder: { active: false, gain: null, node: null, volume: 0.5 },
+            wind: { active: false, gain: null, node: null, volume: 0.5 },
+            stream: { active: false, gain: null, node: null, volume: 0.6 },
+            fire: { active: false, gain: null, node: null, volume: 0.5 }
+        };
+
+        function initAudioContext() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContext();
+
+                masterNatureGain = audioCtx.createGain();
+                masterNatureGain.gain.setValueAtTime(0.6, audioCtx.currentTime);
+                masterNatureGain.connect(audioCtx.destination);
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function createNoiseBuffer(type = 'pink', duration = 5) {
+            const bufferSize = audioCtx.sampleRate * duration;
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const data = buffer.getChannelData(0);
+
+            if (type === 'white') {
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+            } else {
+                let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+                for (let i = 0; i < bufferSize; i++) {
+                    const white = Math.random() * 2 - 1;
+                    b0 = 0.99886 * b0 + white * 0.0555179;
+                    b1 = 0.99332 * b1 + white * 0.0750759;
+                    b2 = 0.96900 * b2 + white * 0.1538520;
+                    b3 = 0.86650 * b3 + white * 0.3104856;
+                    b4 = 0.55000 * b4 + white * 0.5329522;
+                    b5 = -0.7616 * b5 - white * 0.0168980;
+                    data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.11;
+                    b6 = white * 0.115926;
+                }
+            }
+            return buffer;
+        }
+
+        function startNatureSound(soundKey) {
+            initAudioContext();
+            const config = natureNodes[soundKey];
+            if (config.active) return;
+
+            const gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(config.volume, audioCtx.currentTime);
+            gain.connect(masterNatureGain);
+            config.gain = gain;
+
+            if (soundKey === 'rain') {
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = createNoiseBuffer('pink', 6);
+                noise.loop = true;
+
+                const lpFilter = audioCtx.createBiquadFilter();
+                lpFilter.type = 'lowpass';
+                lpFilter.frequency.value = 1100;
+
+                const hpFilter = audioCtx.createBiquadFilter();
+                hpFilter.type = 'highpass';
+                hpFilter.frequency.value = 250;
+
+                noise.connect(lpFilter);
+                lpFilter.connect(hpFilter);
+                hpFilter.connect(gain);
+                noise.start();
+                config.node = noise;
+
+            } else if (soundKey === 'waves') {
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = createNoiseBuffer('pink', 8);
+                noise.loop = true;
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.value = 400;
+
+                const lfo = audioCtx.createOscillator();
+                lfo.frequency.value = 0.09;
+                const lfoGain = audioCtx.createGain();
+                lfoGain.gain.value = 280;
+
+                lfo.connect(lfoGain);
+                lfoGain.connect(filter.frequency);
+
+                noise.connect(filter);
+                filter.connect(gain);
+
+                noise.start();
+                lfo.start();
+                config.node = { stop: () => { try { noise.stop(); lfo.stop(); } catch(e){} } };
+
+            } else if (soundKey === 'thunder') {
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = createNoiseBuffer('pink', 10);
+                noise.loop = true;
+
+                const lp = audioCtx.createBiquadFilter();
+                lp.type = 'lowpass';
+                lp.frequency.value = 140;
+
+                const thunderGain = audioCtx.createGain();
+                thunderGain.gain.value = 0.1;
+
+                let thunderTimer = setInterval(() => {
+                    if (!config.active) return;
+                    const now = audioCtx.currentTime;
+                    thunderGain.gain.cancelScheduledValues(now);
+                    thunderGain.gain.setValueAtTime(0.05, now);
+                    thunderGain.gain.linearRampToValueAtTime(0.85, now + 1.8);
+                    thunderGain.gain.exponentialRampToValueAtTime(0.02, now + 6.0);
+                }, 18000);
+
+                noise.connect(lp);
+                lp.connect(thunderGain);
+                thunderGain.connect(gain);
+                noise.start();
+                config.node = { stop: () => { try { noise.stop(); clearInterval(thunderTimer); } catch(e){} } };
+
+            } else if (soundKey === 'wind') {
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = createNoiseBuffer('pink', 6);
+                noise.loop = true;
+
+                const bp = audioCtx.createBiquadFilter();
+                bp.type = 'bandpass';
+                bp.frequency.value = 450;
+                bp.Q.value = 2.5;
+
+                const lfo = audioCtx.createOscillator();
+                lfo.frequency.value = 0.15;
+                const lfoGain = audioCtx.createGain();
+                lfoGain.gain.value = 200;
+
+                lfo.connect(lfoGain);
+                lfoGain.connect(bp.frequency);
+
+                noise.connect(bp);
+                bp.connect(gain);
+                noise.start();
+                lfo.start();
+                config.node = { stop: () => { try { noise.stop(); lfo.stop(); } catch(e){} } };
+
+            } else if (soundKey === 'stream') {
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = createNoiseBuffer('white', 5);
+                noise.loop = true;
+
+                const bp1 = audioCtx.createBiquadFilter();
+                bp1.type = 'bandpass';
+                bp1.frequency.value = 750;
+                bp1.Q.value = 4.0;
+
+                const bp2 = audioCtx.createBiquadFilter();
+                bp2.type = 'bandpass';
+                bp2.frequency.value = 1600;
+                bp2.Q.value = 3.5;
+
+                noise.connect(bp1);
+                noise.connect(bp2);
+                bp1.connect(gain);
+                bp2.connect(gain);
+
+                noise.start();
+                config.node = noise;
+
+            } else if (soundKey === 'fire') {
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = createNoiseBuffer('pink', 4);
+                noise.loop = true;
+
+                const lp = audioCtx.createBiquadFilter();
+                lp.type = 'lowpass';
+                lp.frequency.value = 300;
+
+                const crackleGain = audioCtx.createGain();
+                crackleGain.gain.value = 0.4;
+
+                let crackleInterval = setInterval(() => {
+                    if (!config.active) return;
+                    if (Math.random() > 0.4) {
+                        const now = audioCtx.currentTime;
+                        crackleGain.gain.setValueAtTime(0.8, now);
+                        crackleGain.gain.exponentialRampToValueAtTime(0.1, now + 0.08);
+                    }
+                }, 220);
+
+                noise.connect(lp);
+                lp.connect(crackleGain);
+                crackleGain.connect(gain);
+                noise.start();
+                config.node = { stop: () => { try { noise.stop(); clearInterval(crackleInterval); } catch(e){} } };
+            }
+
+            config.active = true;
+            document.getElementById(`card-${soundKey}`)?.classList.add('active');
+            const pill = document.querySelector(`.toggle-pill[data-sound="${soundKey}"]`);
+            if (pill) pill.classList.add('on');
+        }
+
+        function stopNatureSound(soundKey) {
+            const config = natureNodes[soundKey];
+            if (!config.active) return;
+
+            if (config.node) {
+                try {
+                    config.node.stop();
+                } catch(e) {}
+                config.node = null;
+            }
+            config.active = false;
+            document.getElementById(`card-${soundKey}`)?.classList.remove('active');
+            const pill = document.querySelector(`.toggle-pill[data-sound="${soundKey}"]`);
+            if (pill) pill.classList.remove('on');
+        }
+
+        function toggleNatureSound(soundKey) {
+            if (natureNodes[soundKey].active) {
+                stopNatureSound(soundKey);
+            } else {
+                startNatureSound(soundKey);
+            }
+        }
+
+        function playChime(isFocusStart = true) {
+            initAudioContext();
+            const now = audioCtx.currentTime;
+
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            const baseFreq = isFocusStart ? 528 : 432;
+            osc1.type = 'sine';
+            osc1.frequency.setValueAtTime(baseFreq, now);
+
+            osc2.type = 'sine';
+            osc2.frequency.setValueAtTime(baseFreq * 2.01, now);
+
+            gain.gain.setValueAtTime(0.001, now);
+            gain.gain.exponentialRampToValueAtTime(0.35, now + 0.06);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
+
+            osc1.connect(gain);
+            osc2.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc1.start(now);
+            osc2.start(now);
+            osc1.stop(now + 3.3);
+            osc2.stop(now + 3.3);
+        }
+
+        document.querySelectorAll('.toggle-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                const sound = pill.dataset.sound;
+                toggleNatureSound(sound);
+            });
+        });
+
+        document.querySelectorAll('input[data-sound-vol]').forEach(slider => {
+            slider.addEventListener('input', (e) => {
+                const sound = e.target.dataset.soundVol;
+                const val = parseFloat(e.target.value);
+                natureNodes[sound].volume = val;
+                if (natureNodes[sound].gain && audioCtx) {
+                    natureNodes[sound].gain.gain.setValueAtTime(val, audioCtx.currentTime);
+                }
+            });
+        });
+
+        const natureMasterVolume = document.getElementById('natureMasterVolume');
+        const natureMasterVolPercent = document.getElementById('natureMasterVolPercent');
+        natureMasterVolume.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            natureMasterVolPercent.textContent = `${Math.round(val * 100)}%`;
+            if (masterNatureGain && audioCtx) {
+                masterNatureGain.gain.setValueAtTime(val, audioCtx.currentTime);
+            }
+        });
+
+        /* ============================================================
+           6. POMODORO TIMER CORE CONTROLLER
+        ============================================================ */
+        const timerDigits = document.getElementById('timerDigits');
+        const statusBadge = document.getElementById('statusBadge');
+        const statusText = document.getElementById('statusText');
+        const timerSubtext = document.getElementById('timerSubtext');
+        const progressCircle = document.getElementById('progressCircle');
+        const roundDotsContainer = document.getElementById('roundDotsContainer');
+        const btnPlayPause = document.getElementById('btnPlayPause');
+        const playPauseIcon = document.getElementById('playPauseIcon');
+        const playPauseText = document.getElementById('playPauseText');
+        const btnReset = document.getElementById('btnReset');
+        const btnSkip = document.getElementById('btnSkip');
+        const totalElapsedText = document.getElementById('totalElapsedText');
+        const roundsCompletedText = document.getElementById('roundsCompletedText');
+        const verseBanner = document.getElementById('verseBanner');
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = seconds % 60;
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        function formatTimeSeconds(totalSec) {
+            const h = Math.floor(totalSec / 3600);
+            const m = Math.floor((totalSec % 3600) / 60);
+            const s = totalSec % 60;
+            if (h > 0) {
+                return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+            }
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        function renderRoundDots() {
+            roundDotsContainer.innerHTML = '';
+            for (let i = 1; i <= currentMode.rounds; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'round-dot';
+                if (i < currentRound) {
+                    dot.classList.add('done');
+                } else if (i === currentRound) {
+                    dot.classList.add('active');
+                }
+                roundDotsContainer.appendChild(dot);
+            }
+            roundsCompletedText.textContent = `${currentRound - 1} / ${currentMode.rounds}`;
+        }
+
+        function updateProgressDisplay() {
+            timerDigits.textContent = formatTime(secondsLeft);
+            document.title = `${formatTime(secondsLeft)} ✦ ${isFocus ? 'تركيز' : 'استراحة'} ✦ بومودورو القرآن`;
+
+            const totalForPhase = (isFocus ? currentMode.focusMinutes : currentMode.breakMinutes) * 60;
+            const fraction = totalForPhase > 0 ? (totalForPhase - secondsLeft) / totalForPhase : 0;
+            const offset = CIRCUMFERENCE * (1 - fraction);
+            progressCircle.style.strokeDasharray = CIRCUMFERENCE;
+            progressCircle.style.strokeDashoffset = offset;
+
+            if (isFocus) {
+                progressCircle.style.stroke = 'var(--emerald)';
+                statusBadge.classList.remove('break');
+                statusText.textContent = 'وقت العمل والتركيز';
+                timerSubtext.textContent = `الجولة ${currentRound} من ${currentMode.rounds} ✦ استعن بالله وأخلص العمل`;
+            } else {
+                progressCircle.style.stroke = 'var(--break-blue)';
+                statusBadge.classList.add('break');
+                statusText.textContent = 'استراحة وتنفس هادئ';
+                timerSubtext.textContent = `استراحة الجولة ${currentRound} ✦ جدد نشاطك واذكر الله`;
+            }
+        }
+
+        function switchPhase(newIsFocus) {
+            isFocus = newIsFocus;
+            if (isFocus) {
+                secondsLeft = currentMode.focusMinutes * 60;
+                playChime(true);
+                rotateVerse();
+                sendBrowserNotification('حان وقت التركيز! ⚡', `بدء الجولة رقم ${currentRound} في جلسة الـ 4 ساعات`);
+
+                if (checkPauseOnBreak.checked && quranAudio.paused) {
+                    playQuran();
+                }
+            } else {
+                secondsLeft = currentMode.breakMinutes * 60;
+                playChime(false);
+                sendBrowserNotification('وقت الاستراحة 🌿', 'أحسنت! خذ نفساً عميقاً وجدد طاقتك');
+
+                if (checkPauseOnBreak.checked && !quranAudio.paused) {
+                    pauseQuran();
+                }
+            }
+            updateProgressDisplay();
+        }
+
+        function onTimerTick() {
+            if (secondsLeft > 0) {
+                secondsLeft--;
+                updateProgressDisplay();
+            } else {
+                if (isFocus) {
+                    if (currentMode.breakMinutes > 0) {
+                        switchPhase(false);
+                    } else {
+                        advanceRound();
+                    }
+                } else {
+                    advanceRound();
+                }
+            }
+        }
+
+        function advanceRound() {
+            if (currentRound < currentMode.rounds) {
+                currentRound++;
+                renderRoundDots();
+                switchPhase(true);
+            } else {
+                pauseTimer();
+                playChime(true);
+                sendBrowserNotification('مبارك! 🏆 أتممت جلسة الـ 4 ساعات بنجاح', 'تقبل الله عملك وجعله مباركاً خالصاً');
+                alert('🏆 ما شاء الله! أتممت جلسة الـ 4 ساعات بنجاح. بارك الله في وقتك وجهدك.');
+                resetTimer();
+            }
+        }
+
+        function startTimer() {
+            initAudioContext();
+            isRunning = true;
+            btnPlayPause.classList.add('running');
+            playPauseIcon.textContent = '⏸';
+            playPauseText.textContent = 'إيقاف مؤقت';
+
+            timerInterval = setInterval(onTimerTick, 1000);
+
+            if (!totalElapsedInterval) {
+                totalElapsedInterval = setInterval(() => {
+                    totalElapsedSeconds++;
+                    totalElapsedText.textContent = formatTimeSeconds(totalElapsedSeconds);
+                }, 1000);
+            }
+
+            const hasAnySound = Object.values(natureNodes).some(n => n.active);
+            if (!hasAnySound) {
+                startNatureSound('rain');
+            }
+        }
+
+        function pauseTimer() {
+            isRunning = false;
+            clearInterval(timerInterval);
+            timerInterval = null;
+            btnPlayPause.classList.remove('running');
+            playPauseIcon.textContent = '▶';
+            playPauseText.textContent = 'استئناف الجلسة';
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            isFocus = true;
+            currentRound = 1;
+            secondsLeft = currentMode.focusMinutes * 60;
+            renderRoundDots();
+            updateProgressDisplay();
+        }
+
+        btnPlayPause.addEventListener('click', () => {
+            if (isRunning) {
+                pauseTimer();
+            } else {
+                startTimer();
+            }
+        });
+
+        btnReset.addEventListener('click', () => {
+            if (confirm('هل تريد إعادة تعيين مؤقت الجولة الحالية؟')) {
+                resetTimer();
+            }
+        });
+
+        btnSkip.addEventListener('click', () => {
+            if (confirm('تخطي إلى المرحلة التالية؟')) {
+                if (isFocus) {
+                    if (currentMode.breakMinutes > 0) switchPhase(false);
+                    else advanceRound();
+                } else {
+                    advanceRound();
+                }
+            }
+        });
+
+        document.querySelectorAll('.mode-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.mode-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+
+                const modeKey = chip.dataset.mode;
+                if (modeKey === 'custom') {
+                    const focus = parseInt(prompt('أدخل مدة التركيز بالدقائق:', '50')) || 50;
+                    const brk = parseInt(prompt('أدخل مدة الاستراحة بالدقائق:', '10')) || 10;
+                    const rds = parseInt(prompt('أدخل عدد الجولات (مثلاً 4 للحصول على 4 ساعات):', '4')) || 4;
+                    MODES.custom.focusMinutes = focus;
+                    MODES.custom.breakMinutes = brk;
+                    MODES.custom.rounds = rds;
+                    currentMode = MODES.custom;
+                } else {
+                    currentMode = MODES[modeKey];
+                }
+
+                resetTimer();
+            });
+        });
+
+        let verseIndex = 0;
+        function rotateVerse() {
+            verseIndex = (verseIndex + 1) % VERSES_LIST.length;
+            verseBanner.style.opacity = '0';
+            setTimeout(() => {
+                verseBanner.textContent = VERSES_LIST[verseIndex];
+                verseBanner.style.opacity = '1';
+            }, 300);
+        }
+
+        /* ============================================================
+           7. BROWSER NOTIFICATIONS & ZEN MODE
+        ============================================================ */
+        const btnNotification = document.getElementById('btnNotification');
+        const notifLabel = document.getElementById('notifLabel');
+
+        function requestNotificationPermission() {
+            if (!('Notification' in window)) {
+                alert('المتصفح لا يدعم التنبيهات المنبثقة.');
+                return;
+            }
+            Notification.requestPermission().then(perm => {
+                if (perm === 'granted') {
+                    notifLabel.textContent = 'التنبيهات مفعلة ✓';
+                    btnNotification.style.borderColor = 'var(--emerald)';
+                }
+            });
+        }
+
+        btnNotification.addEventListener('click', requestNotificationPermission);
+
+        function sendBrowserNotification(title, body) {
+            if ('Notification' in window && Notification.permission === 'granted') {
+                new Notification(title, {
+                    body: body,
+                    icon: 'https://cdn-icons-png.flaticon.com/512/3246/3246672.png'
+                });
+            }
+        }
+
+        const btnZenToggle = document.getElementById('btnZenToggle');
+        const btnZenExit = document.getElementById('btnZenExit');
+
+        function toggleZenMode() {
+            document.body.classList.toggle('zen-mode');
+            if (document.body.classList.contains('zen-mode')) {
+                if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen().catch(() => {});
+                }
+            } else {
+                if (document.fullscreenElement && document.exitFullscreen) {
+                    document.exitFullscreen().catch(() => {});
+                }
+            }
+        }
+
+        btnZenToggle.addEventListener('click', toggleZenMode);
+        btnZenExit.addEventListener('click', toggleZenMode);
+
+        /* ============================================================
+           8. INITIALIZATION
+        ============================================================ */
+        window.addEventListener('DOMContentLoaded', () => {
+            // Restore saved reciter or default to Minshawi Mujawwad
+            const savedReciter = localStorage.getItem('quran_selected_reciter') || 'minshawi_mujawwad';
+            currentReciterKey = savedReciter;
+
+            // Restore last surah
+            const savedSurah = localStorage.getItem('quran_last_surah');
+            const initIdx = savedSurah !== null ? parseInt(savedSurah) : 0;
+
+            setReciter(savedReciter, false);
+            loadSurah(initIdx, false);
+
+            renderRoundDots();
+            updateProgressDisplay();
+        });
+    </script>
+</body>
+</html>
